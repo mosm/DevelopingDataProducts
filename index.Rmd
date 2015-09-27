@@ -1,0 +1,65 @@
+---
+title       : Mtcars regression analysis
+subtitle    : Exploring regression of miles per gallon with various mtcars variables
+author      : Marcel Mos
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [bootstrap, quiz]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+## Regression Analysis
+
+Would you like to explore the relation between miles per gallon and various other mtcars variables?
+
+```{r echo=FALSE, fig.width=4, fig.height=4}
+data(mtcars)
+fit <- lm(mpg~wt, data=mtcars)
+plot(mtcars$wt, mtcars$mpg)
+abline(fit$coefficients[1], fit$coefficients[2], col="red")
+```
+
+- What is the impact of transmission systems, weight and number of cylinders
+- Analysis of a cool dataset of no less than 32 models from the years 1973 and 1974
+- Real retro data analysis, all in your hands! 
+
+---
+## Variable Selection
+
+Choose from one of these exciting variables:
+
+|Variables        |                |
+|-----------------|----------------|
+|Cylinders        |Displacement    |
+|Horsepower       |Rear axle ratio |
+|Weight           |1/4 mile time   |
+|Engine type      |Transmission    |
+|Forward gears    |Carburators     |
+
+---
+## Review t- and p-values
+Upon selection of a variable the table with regression results will be updated. You can at your leisure review:
+
+-intercept coefficient
+variable impact
+p-value of intercept and variable
+t-value of intercept and variable
+
+and to top it off, you receive visual feedback through a cool plot! 
+
+--- &radio
+## Quiz
+
+Are you excited and want to start using this great Mtcars regression app?
+
+1. _Yes_
+2. No
+
+*** .hint 
+I'm so excited! 
+
+*** .explanation 
+Of course you are, what's not to like? Go explore!
+
